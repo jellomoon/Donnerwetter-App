@@ -3,38 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
     <title>Donnerwetter</title>
   </head>
   <body>
-    <header>
-      <form>
-        <input type="search" placeholder="Enter a city..." required />
-        <input type="submit" value="Search" />
-      </form>
-    </header>
-    <main>
-      <div>
-        <h1>Berlin</h1>
-        <p>
-          Tuesday 14:49, scattered clouds
-          <br />
-          Humidtiy: 66%, Wind: 30km/h
-        </p>
-      </div>
-      <div>☀️ 12°C</div>
-    </main>
+    <div class="weather-app">
+      <header>
+        <form>
+          <input type="search" placeholder="Enter a city..." required />
+          <input type="submit" value="Search" />
+        </form>
+      </header>
+      <main>
+        <div>
+          <h1>Berlin</h1>
+          <p>
+            Tuesday 14:49, scattered clouds
+            <br />
+            Humidtiy: 66%, Wind: 30km/h
+          </p>
+        </div>
+        <div>☀️ 12°C</div>
+      </main>
 
-    <footer>
-      Coded by
-      <a href="https://github.com/jellomoon" target="_blank">Mona Beyersdorf</a
-      >, is
-      <a href="https://github.com/jellomoon/Donnerwetter-App" target="_blank"
-        >open-sourced on GitHub</a
-      >
-      and
-      <a href="https://donnerwetter.netlify.app/" target="_blank">
-        hosted on Netlify</a
-      >
-    </footer>
+      <footer>
+        Coded by
+        <a href="https://github.com/jellomoon" target="_blank"
+          >Mona Beyersdorf</a
+        >, is
+        <a href="https://github.com/jellomoon/Donnerwetter-App" target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and
+        <a href="https://donnerwetter.netlify.app/" target="_blank">
+          hosted on Netlify</a
+        >
+      </footer>
+    </div>
   </body>
 </html>
