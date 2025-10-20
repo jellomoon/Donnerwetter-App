@@ -1,42 +1,91 @@
 body {
-  background-color: #accbe1;
   font-family: "Quicksand", sans-serif;
+  background-color: #accbe1;
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/175/098/original/pexels-tom-van-dyck-423949093-15532423.jpg?1760988363);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
 }
 
 a {
-  color: #7c98b3;
+  color: #b9dbfa;
 }
 
 .weather-app {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),
+    inset 0 4px 20px rgba(255, 255, 255, 0.3);
+  margin: 45px auto;
+  max-width: 600px;
+  padding: 30px;
+}
+
+.weather-app::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  backdrop-filter: blur(1px);
+  box-shadow: inset -10px -8px 0px -11px rgba(255, 255, 255, 1),
+    inset 0px -9px 0px -8px rgba(255, 255, 255, 1);
+  opacity: 0.6;
+  z-index: -1;
+  filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(115%);
+}
+
+/*.weather-app {
   background-color: #f0f8ff;
   border-radius: 20px;
   box-shadow: 0 30px 50px rgba(32, 83, 131, 0.1);
   margin: 45px auto;
   max-width: 600px;
   padding: 30px;
-}
+}*/
 
 header {
   padding: 0 0 20px 0;
 }
 
 .search-form-input {
-  background-color: #cee5f2;
-  border: none;
-  border-radius: 45px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),
+    inset 0 4px 20px rgba(255, 255, 255, 0.3);
+  color: #f0f8ff;
   font-size: 16px;
   padding: 15px 20px;
   width: 80%;
 }
 
 .search-form-button {
-  color: #f0f8ff;
-  background-color: #7c98b3;
-  border: none;
-  border-radius: 45px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),
+    inset 0 4px 20px rgba(255, 255, 255, 0.3);
+  color: #fff;
   font-size: 16px;
   margin-left: 5px;
   padding: 15px 30px;
+}
+
+.search-form-button:hover {
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
 }
 
 main {
@@ -49,20 +98,22 @@ main {
 }
 
 .weather-app-city {
+  color: #fff;
   font-size: 38px;
   margin: 0;
   line-height: 48px;
 }
 
 .weather-app-details {
-  color: rgba(39, 33, 66, 0.4);
+  /*color: rgba(39, 33, 66, 0.4);*/
+  color: #fff;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
 }
 
 .value {
-  color: #3ac3e5;
+  color: #7bc7e6;
   font-weight: 600;
 }
 
@@ -76,20 +127,24 @@ main {
 }
 
 .weather-app-temperature {
+  color: #fff;
   font-size: 88px;
   font-weight: 600;
   margin-left: 10px;
 }
 
 .weather-app-unit {
+  color: #fff;
   font-size: 20px;
   font-weight: 500;
   margin-top: 22px;
 }
 
 footer {
-  color: rgba(0, 0, 0, 0.6);
+  border-top: 1px solid #cee5f2;
+  /*color: rgba(0, 0, 0, 0.6);*/
+  color: #fff;
   font-size: 14px;
-  padding: 30px 0 0 0;
+  padding: 25px 0 0 0;
   text-align: center;
 }
