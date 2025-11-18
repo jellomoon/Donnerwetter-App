@@ -7,6 +7,8 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 a {
@@ -52,7 +54,9 @@ a {
   padding: 30px;
 }*/
 
-header {
+.search-form {
+  display: flex;
+  align-items: center;
   padding: 0 0 20px 0;
 }
 
@@ -66,7 +70,7 @@ header {
   color: #f0f8ff;
   font-size: 16px;
   padding: 15px 20px;
-  width: 80%;
+  flex: 1;
 }
 
 .search-form-button {
