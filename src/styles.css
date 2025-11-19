@@ -145,6 +145,53 @@ main {
   margin-top: 22px;
 }
 
+.weather-forecast {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 25px 5px 10px 5px;
+}
+
+.weather-forecast-day {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),
+    inset 0 4px 20px rgba(255, 255, 255, 0.3);
+  flex: 1 1 10%;
+  padding: 5px 15px;
+}
+
+.weather-forecast-date {
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+.weather-forecast-icon {
+  text-align: center;
+  font-size: 24px;
+}
+
+.weather-forecast-temps {
+  text-align: center;
+  color: #69e9f5;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.weather-forecast-temp {
+  padding: 0 5px;
+}
+
 footer {
   border-top: 1px solid #cee5f2;
   /*color: rgba(0, 0, 0, 0.6);*/
