@@ -62,7 +62,25 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+/*function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+
+  forecast.innerHTML = `
+  <div class="weather-forecast-day">
+    <div class="weather-forecast-date">Tue</div>
+    <div class="weather-forecast-icon">☀️</div>
+    <div class="weather-forecast-temps">
+      <div class="weather-forecast-temp">
+        <strong>15°</strong>
+      </div>
+      <div class="weather-forecast-temp">9°</div>
+    </div>
+  </div>
+  `;
+}*/ //this isn't working somehow - ask in Slack when you get back from Thailand
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Berlin");
+/*displayForecast();*/
