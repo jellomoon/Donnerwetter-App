@@ -9,11 +9,6 @@ function refreshWeatherData(response) {
   let date = new Date(response.data.time * 1000);
   let iconElement = document.querySelector("#icon");
 
-  iconElement.innerHTML = `<img
-                src="${response.data.condition.icon_url}"
-                class="weather-app-icon"
-              />`;
-
   let windSpeedMs = response.data.wind.speed;
   let windSpeedKmh = (windSpeedMs * 3.6).toFixed(1);
 
@@ -23,6 +18,10 @@ function refreshWeatherData(response) {
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${windSpeedKmh} km/h`;
   temperatureELement.innerHTML = Math.round(temperature);
+  iconElement.innerHTML = `<img
+                src="${response.data.condition.icon_url}"
+                class="weather-app-icon"
+              />`;
 }
 
 function formatDate(date) {
@@ -59,28 +58,34 @@ function searchCity(city) {
 function handleSearchSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-form-input");
+
   searchCity(searchInput.value);
 }
 
-/*function displayForecast() {
-  let forecast = document.querySelector("#forecast");
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
 
-  forecast.innerHTML = `
-  <div class="weather-forecast-day">
-    <div class="weather-forecast-date">Tue</div>
-    <div class="weather-forecast-icon">☀️</div>
-    <div class="weather-forecast-temps">
-      <div class="weather-forecast-temp">
-        <strong>15°</strong>
-      </div>
-      <div class="weather-forecast-temp">9°</div>
-    </div>
-  </div>
-  `;
-}*/ //this isn't working somehow - ask in Slack when you get back from Thailand
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+    <div class="weather-forecast-day">
+            <div class="weather-forecast-date">${day}</div>
+            <div class="weather-forecast-icon">☀️</div>
+            <div class="weather-forecast-temps">
+              <div class="weather-forecast-temp"><strong>15°</strong></div>
+              <div class="weather-forecast-temp">9°</div>
+            </div>
+          </div>
+    `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Berlin");
-/*displayForecast();*/
