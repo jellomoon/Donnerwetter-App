@@ -62,6 +62,7 @@ function handleSearchSubmit(event) {
   let searchInput = document.querySelector("#search-form-input");
 
   searchCity(searchInput.value);
+  searchInput.value = "";
 }
 
 function formatDay(timestamp) {
@@ -82,11 +83,10 @@ function displayForecast(response) {
 
   let forecastHtml = "";
 
-  response.data.daily.forEach(function (day, index) {
-    if (index < 5) {
-      forecastHtml =
-        forecastHtml +
-        `
+  response.data.daily.slice(1, 6).forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
     <div class="weather-forecast-day">
             <div class="weather-forecast-date">${formatDay(day.time)}</div>
             <div class="weather-forecast-icon">
@@ -104,7 +104,6 @@ function displayForecast(response) {
             </div>
           </div>
     `;
-    }
   });
 
   let forecastElement = document.querySelector("#forecast");
